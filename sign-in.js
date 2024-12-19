@@ -54,7 +54,7 @@ signInWithEmailAndPassword(auth, email, pass)
   localStorage.setItem("name",name);
   localStorage.setItem("mail",email);
   alert("Success !")
-  window.location.href = "./loggedin.html";
+  window.location.href = "../loggedin.html";
   
 })
 .catch((error) => {
