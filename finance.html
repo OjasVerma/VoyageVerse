@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageVerse</title>
+    <link rel="favicon" href="Logo">
+    <!-- <script src="sign-in.js" defer type="module"></script> -->
+    <link rel="stylesheet" href="./styles/services.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="./services.html">
+                <h1>VoyageVerse</h1>
+            </a>
+        </div>
+        <nav>
+            <a href="#">
+                <ul>
+                    <li>Socials</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul>
+                    <li>Packages</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul>
+                    <li id="Auth_Name"></li>
+                </ul>
+            </a>
+        </nav>
+        <!-- <div class="search">
+            <input type="text" placeholder="Search destination">
+            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                    fill="rgba(255,255,255,1)">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                        d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z">
+                    </path>
+                </svg></button>
+        </div> -->
+    </div>
+    <div class="container">
+        <h1>Trip Finance Manager</h1>
+
+        <div class="form-container">
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <select id="expense-category">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Accommodation">Accommodation</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                </select>
+                <button type="submit" onclick="sendEmail()">Add Expense</button>
+            </form>
+        </div>
+
+        <div class="expense-list">
+            <h2>Expenses</h2>
+            <table id="expense-table">
+                <thead>
+                    <tr>
+                        <th>Expense Name</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="total">
+            <h2>Total Expenses</h2>
+            <p id="total-expenses">₹0.00</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Made with ❤️ by a Traveller, for a Traveller</h3>
+    </div>
+</body>
+<script>
+    var a = localStorage.getItem("mail");
+    document.getElementById("Auth_Name").innerHTML = ("Hi 🖐 , " + a);
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        padding: 20px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-container,
+    .expense-list,
+    .total {
+        margin-bottom: 30px;
+    }
+
+    input,
+    select,
+    button {
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+    }
+
+    input[type="number"] {
+        width: calc(100% - 22px);
+    }
+
+    button {
+        background-color: rgb(26, 51, 192);
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: rgba(26, 51, 192, 0.685);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    .total p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+<script>
+    document.getElementById('expense-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Get form values
+        const expenseName = document.getElementById('expense-name').value;
+        const expenseAmount = parseFloat(document.getElementById('expense-amount').value);
+        const expenseCategory = document.getElementById('expense-category').value;
+
+        // Validation
+        if (!expenseName || isNaN(expenseAmount) || expenseAmount <= 0) {
+            alert("Please enter valid expense details");
+            return;
+        }
+
+        // Create a new expense row
+        const table = document.getElementById('expense-table').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+        newRow.innerHTML = `
+        <td>${expenseName}</td>
+        <td>₹${expenseAmount.toFixed(2)}</td>
+        <td>${expenseCategory}</td>
+    `;
+
+        // Update total expenses
+        updateTotalExpenses(expenseAmount);
+
+        // Reset form fields
+        document.getElementById('expense-name').value = '';
+        document.getElementById('expense-amount').value = '';
+    });
+
+    let totalExpenses = 0;
+
+    function updateTotalExpenses(amount) {
+        totalExpenses += amount;
+        document.getElementById('total-expenses').textContent = `₹${totalExpenses.toFixed(2)}`;
+        window.localStorage.setItem("Total Expense", totalExpenses);
+        console.log(window.localStorage.getItem("Total Expense"));
+    }
+    function sendEmail(){
+        Email.send({
+            Host:"smtp.gmail.com",
+            Username:"vermaojas0512@gmail.com",
+            Password:"Amaze@9239",
+            To:window.localStorage.getItem("mail"),
+            From:"vermaojas0512@gmail.com",
+            Subject: "Your latest expense chart !",
+            Body: "Your expense sums upto ₹"+totalExpenses,
+        })
+        .then(function(message){
+            alert("Expenses updated successfull !")
+        })
+    }
+    
+    </script>
+
+</html>
