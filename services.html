@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageVerse</title>
+    <link rel="icon" href="images/logo.svg" type="image/icon type">
+    <link rel="stylesheet" href="./styles/services.css">
+
+</head>
+
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="./loggedin.html">
+                <h1>VoyageVerse</h1>
+            </a>
+        </div>
+        <nav>
+            <a href="./social.html">
+                <ul>
+                    <li>Socials</li>
+                </ul>
+            </a>
+            <a href="./package.html">
+                <ul>
+                    <li>Packages</li>
+                </ul>
+            </a>
+            <a href="./index.html">
+                <ul>
+                    <li>Sign Out</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul>
+                    <li id="Auth_Name"></li>
+                </ul>
+            </a>
+            
+        </nav>
+        <!-- <div class="search">
+            <input type="text" placeholder="Search destination">
+            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                    fill="rgba(255,255,255,1)">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                        d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z">
+                    </path>
+                </svg></button>
+        </div> -->
+    </div>
+    <div class="main">
+        <div class="title">
+            <h2>Find your next trip</h2>
+            <h1>Try <span id="city">Jaipur</span></h1>
+        </div>
+        <div class="recommend">
+
+            <a href="https://google.com/search?q=Mussoorie" target="_blank">
+                <div class="window" style="background-image: url(images/mussoorie.jpg); background-position: center; background-size: cover;">
+                    <h3>Mussoorie</h3>
+                    <h4>Uttarakhand</h4>
+                </div>
+            </a>
+            <a  href="https://google.com/search?q=Jodhpur" target="_blank">
+                <div class="window" style="background-image: url(images/jodhpur.jpg); background-position: center; background-size: cover;">
+                    <h3>Jodhpur</h3>
+                    <h4>Rajasthan</h4>
+                </div>
+            </a>
+            <a  href="https://google.com/search?q=Sedona,Arizona" target="_blank"">
+                <div class="window" style="background-image: url(images/emily-lewis-acF_5jm1Dhk-unsplash.jpg); background-position: center; background-size: cover;">
+                    <h3>Sedona</h3>
+                    <h4>Arizona, USA</h4>
+                </div>
+            </a>
+            <a  href="https://google.com/search?q=Costa%20Brava" target="_blank">
+                <div class="window" style="background-image: url(images/costa_brava.jpg); background-position: center; background-size: cover;">
+                    <h3>Costa Brava</h3>
+                    <h4>Spain</h4>
+                </div>
+            </a>
+            <a  href="https://google.com/search?q=Ooty" target="_blank">
+                <div class="window" style="background-image: url(images/win5.jpg); background-position: center; background-size: cover;">
+                    <h3>Ooty</h3>
+                    <h4>Tamil Nadu</h4>
+                </div>
+            </a>
+            <a  href="https://google.com/search?q=Spiti%20Valley" target="_blank">
+                <div class="window" style="background-image: url(images/spiti_valley.jpg); background-position: center; background-size: cover;">
+                    <h3>Spiti Valley</h3>
+                    <h4>Himachal Pradesh</h4>
+                </div>
+            </a>
+            <a  href="https://google.com/search?q=Jaipur" target="_blank">
+                <div class="window" style="background-image: url(images/jaipur.jpg); background-position: center; background-size: cover;">
+                    <h3>Jaipur</h3>
+                    <h4>Rajasthan</h4>
+                </div>
+            </a>
+        </div>
+
+        <div class="title">
+            <h2>Plan your travel, Hastle Free !</h2>
+            <br>
+            <div class="options">
+                <a href="./nearby.html">
+                    <div class="Near">
+                        <p>
+                            Find Nearby Places to Explore
+                        </p>
+                    </div>
+                </a>
+                <a href="./finance.html">
+                    <div class="fin">
+                        <p>Finances</p>
+                    </div>
+                </a>
+                <a href="./language.html">
+                    <div class="lang">
+                        <p>Language Assist</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="footer">
+        <h3>Made with ❤️ by a Traveller, for a Traveller</h3>
+    </div>
+</body>
+<script>
+    var a = localStorage.getItem("name");
+    document.getElementById("Auth_Name").innerHTML = ("Hi 🖐 , " + a);
+
+</script>
+
+</html>

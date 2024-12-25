@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageVerse</title>
+    <link rel="icon" href="images/logo.svg" type="image/icon type">
+    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/finance.css">
+    <link rel="stylesheet" href="./styles/language.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="./services.html">
+                <h1>VoyageVerse</h1>
+            </a>
+        </div>
+        <nav>
+            <a href="social.html">
+                <ul>
+                    <li>Socials</li>
+                </ul>
+            </a>
+            <a href="package.html">
+                <ul>
+                    <li>Packages</li>
+                </ul>
+            </a>
+            <a href="index.html">
+                <ul>
+                    <li>Sign Out</li>
+                </ul>
+            </a>
+            <a href="">
+                <ul>
+                    <li id="Auth_Name"></li>
+                </ul>
+            </a>
+        </nav>
+        <!-- <div class="search">
+            <input type="text" placeholder="Search destination">
+            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                    fill="rgba(255,255,255,1)">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                        d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z">
+                    </path>
+                </svg></button>
+        </div> -->
+    </div>
+    <div class="main">
+        <div class="heading">
+            <h1>Translate </h1>
+            <h3>Everything you want !</h3>
+        </div>
+        <div class="input_text">
+            <input type="text" required name="input" id="input_text_box" placeholder="Enter text for Translate">
+            <select name="lang" id="lang">
+                <option value="">Given Language</option>
+                <option value="ab"> ab </option>
+                <option value="aa"> aa </option>
+                <option value="af"> af </option>
+                <option value="ak"> ak </option>
+                <option value="sq"> sq </option>
+                <option value="am"> am </option>
+                <option value="ar"> ar </option>
+                <option value="an"> an </option>
+                <option value="hy"> hy </option>
+                <option value="as"> as </option>
+                <option value="av"> av </option>
+                <option value="ae"> ae </option>
+                <option value="ay"> ay </option>
+                <option value="az"> az </option>
+                <option value="bm"> bm </option>
+                <option value="ba"> ba </option>
+                <option value="eu"> eu </option>
+                <option value="be"> be </option>
+                <option value="bn"> bn </option>
+                <option value="bh"> bh </option>
+                <option value="bi"> bi </option>
+                <option value="bs"> bs </option>
+                <option value="br"> br </option>
+                <option value="bg"> bg </option>
+                <option value="my"> my </option>
+                <option value="ca"> ca </option>
+                <option value="ch"> ch </option>
+                <option value="ce"> ce </option>
+                <option value="ny"> ny </option>
+                <option value="zh"> zh </option>
+                <option value="cv"> cv </option>
+                <option value="kw"> kw </option>
+                <option value="co"> co </option>
+                <option value="cr"> cr </option>
+                <option value="hr"> hr </option>
+                <option value="cs"> cs </option>
+                <option value="da"> da </option>
+                <option value="dv"> dv </option>
+                <option value="nl"> nl </option>
+                <option value="dz"> dz </option>
+                <option value="en"> en </option>
+                <option value="eo"> eo </option>
+                <option value="et"> et </option>
+                <option value="ee"> ee </option>
+                <option value="fo"> fo </option>
+                <option value="fj"> fj </option>
+                <option value="fi"> fi </option>
+                <option value="fr"> fr </option>
+                <option value="ff"> ff </option>
+                <option value="gl"> gl </option>
+                <option value="gd"> gd </option>
+                <option value="ka"> ka </option>
+                <option value="de"> de </option>
+                <option value="el"> el </option>
+                <option value="kl"> kl </option>
+                <option value="gn"> gn </option>
+                <option value="gu"> gu </option>
+                <option value="ht"> ht </option>
+                <option value="ha"> ha </option>
+                <option value="he"> he </option>
+                <option value="hz"> hz </option>
+                <option value="hi"> hi </option>
+                <option value="ho"> ho </option>
+                <option value="hu"> hu </option>
+                <option value="is"> is </option>
+                <option value="io"> io </option>
+                <option value="ig"> ig </option>
+                <option value="in"> in </option>
+                <option value="ia"> ia </option>
+                <option value="ie"> ie </option>
+                <option value="iu"> iu </option>
+                <option value="ik"> ik </option>
+                <option value="it"> it </option>
+                <option value="ga"> ga </option>
+                <option value="it"> it </option>
+                <option value="ja"> ja </option>
+                <option value="jv"> jv </option>
+                <option value="kl"> kl </option>
+                <option value="kn"> kn </option>
+                <option value="kr"> kr </option>
+                <option value="ks"> ks </option>
+                <option value="kk"> kk </option>
+                <option value="km"> km </option>
+                <option value="ki"> ki </option>
+                <option value="rw"> rw </option>
+                <option value="rn"> rn </option>
+                <option value="ky"> ky </option>
+                <option value="kv"> kv </option>
+                <option value="kg"> kg </option>
+                <option value="ko"> ko </option>
+                <option value="ku"> ku </option>
+                <option value="kj"> kj </option>
+                <option value="lo"> lo </option>
+                <option value="la"> la </option>
+                <option value="lv"> lv </option>
+                <option value="li"> li </option>
+                <option value="ln"> ln </option>
+                <option value="lt"> lt </option>
+                <option value="lu"> lu </option>
+                <option value="lg"> lg </option>
+                <option value="lb"> lb </option>
+                <option value="gv"> gv </option>
+                <option value="mk"> mk </option>
+                <option value="mg"> mg </option>
+                <option value="ms"> ms </option>
+                <option value="ml"> ml </option>
+                <option value="mt"> mt </option>
+                <option value="mi"> mi </option>
+                <option value="mr"> mr </option>
+                <option value="mh"> mh </option>
+                <option value="mo"> mo </option>
+                <option value="mn"> mn </option>
+                <option value="na"> na </option>
+                <option value="nv"> nv </option>
+                <option value="ng"> ng </option>
+                <option value="nd"> nd </option>
+                <option value="ne"> ne </option>
+                <option value="nb"> nb </option>
+                <option value="nn"> nn </option>
+                <option value="ii"> ii </option>
+                <option value="oc"> oc </option>
+                <option value="oj"> oj </option>
+                <option value="cu"> cu </option>
+                <option value="or"> or </option>
+                <option value="om"> om </option>
+                <option value="os"> os </option>
+                <option value="pi"> pi </option>
+                <option value="ps"> ps </option>
+                <option value="fa"> fa </option>
+                <option value="pl"> pl </option>
+                <option value="pt"> pt </option>
+                <option value="pa"> pa </option>
+                <option value="qu"> qu </option>
+                <option value="rm"> rm </option>
+                <option value="ro"> ro </option>
+                <option value="ru"> ru </option>
+                <option value="se"> se </option>
+                <option value="sm"> sm </option>
+                <option value="sg"> sg </option>
+                <option value="sa"> sa </option>
+                <option value="sr"> sr </option>
+                <option value="sh"> sh </option>
+                <option value="st"> st </option>
+                <option value="tn"> tn </option>
+                <option value="sn"> sn </option>
+                <option value="ii"> ii </option>
+                <option value="sd"> sd </option>
+                <option value="si"> si </option>
+                <option value="ss"> ss </option>
+                <option value="sk"> sk </option>
+                <option value="sl"> sl </option>
+                <option value="so"> so </option>
+                <option value="nr"> nr </option>
+                <option value="es"> es </option>
+                <option value="su"> su </option>
+                <option value="sw"> sw </option>
+                <option value="ss"> ss </option>
+                <option value="sv"> sv </option>
+                <option value="tl"> tl </option>
+                <option value="ty"> ty </option>
+                <option value="tg"> tg </option>
+                <option value="ta"> ta </option>
+                <option value="tt"> tt </option>
+                <option value="te"> te </option>
+                <option value="th"> th </option>
+                <option value="bo"> bo </option>
+                <option value="ti"> ti </option>
+                <option value="to"> to </option>
+                <option value="ts"> ts </option>
+                <option value="tr"> tr </option>
+                <option value="tk"> tk </option>
+                <option value="tw"> tw </option>
+                <option value="ug"> ug </option>
+                <option value="uk"> uk </option>
+                <option value="ur"> ur </option>
+                <option value="uz"> uz </option>
+                <option value="ve"> ve </option>
+                <option value="vi"> vi </option>
+                <option value="vo"> vo </option>
+                <option value="wa"> wa </option>
+                <option value="cy"> cy </option>
+                <option value="wo"> wo </option>
+                <option value="fy"> fy </option>
+                <option value="xh"> xh </option>
+                <option value="ji"> ji </option>
+                <option value="yo"> yo </option>
+                <option value="za"> za </option>
+                <option value="zu"> zu </option>
+            </select>
+            <select name="lang" id="lang_output">
+                <option value="">Result Language</option>
+                <option value="ab"> ab </option>
+                <option value="aa"> aa </option>
+                <option value="af"> af </option>
+                <option value="ak"> ak </option>
+                <option value="sq"> sq </option>
+                <option value="am"> am </option>
+                <option value="ar"> ar </option>
+                <option value="an"> an </option>
+                <option value="hy"> hy </option>
+                <option value="as"> as </option>
+                <option value="av"> av </option>
+                <option value="ae"> ae </option>
+                <option value="ay"> ay </option>
+                <option value="az"> az </option>
+                <option value="bm"> bm </option>
+                <option value="ba"> ba </option>
+                <option value="eu"> eu </option>
+                <option value="be"> be </option>
+                <option value="bn"> bn </option>
+                <option value="bh"> bh </option>
+                <option value="bi"> bi </option>
+                <option value="bs"> bs </option>
+                <option value="br"> br </option>
+                <option value="bg"> bg </option>
+                <option value="my"> my </option>
+                <option value="ca"> ca </option>
+                <option value="ch"> ch </option>
+                <option value="ce"> ce </option>
+                <option value="ny"> ny </option>
+                <option value="zh"> zh </option>
+                <option value="cv"> cv </option>
+                <option value="kw"> kw </option>
+                <option value="co"> co </option>
+                <option value="cr"> cr </option>
+                <option value="hr"> hr </option>
+                <option value="cs"> cs </option>
+                <option value="da"> da </option>
+                <option value="dv"> dv </option>
+                <option value="nl"> nl </option>
+                <option value="dz"> dz </option>
+                <option value="en"> en </option>
+                <option value="eo"> eo </option>
+                <option value="et"> et </option>
+                <option value="ee"> ee </option>
+                <option value="fo"> fo </option>
+                <option value="fj"> fj </option>
+                <option value="fi"> fi </option>
+                <option value="fr"> fr </option>
+                <option value="ff"> ff </option>
+                <option value="gl"> gl </option>
+                <option value="gd"> gd </option>
+                <option value="ka"> ka </option>
+                <option value="de"> de </option>
+                <option value="el"> el </option>
+                <option value="kl"> kl </option>
+                <option value="gn"> gn </option>
+                <option value="gu"> gu </option>
+                <option value="ht"> ht </option>
+                <option value="ha"> ha </option>
+                <option value="he"> he </option>
+                <option value="hz"> hz </option>
+                <option value="hi"> hi </option>
+                <option value="ho"> ho </option>
+                <option value="hu"> hu </option>
+                <option value="is"> is </option>
+                <option value="io"> io </option>
+                <option value="ig"> ig </option>
+                <option value="in"> in </option>
+                <option value="ia"> ia </option>
+                <option value="ie"> ie </option>
+                <option value="iu"> iu </option>
+                <option value="ik"> ik </option>
+                <option value="it"> it </option>
+                <option value="ga"> ga </option>
+                <option value="it"> it </option>
+                <option value="ja"> ja </option>
+                <option value="jv"> jv </option>
+                <option value="kl"> kl </option>
+                <option value="kn"> kn </option>
+                <option value="kr"> kr </option>
+                <option value="ks"> ks </option>
+                <option value="kk"> kk </option>
+                <option value="km"> km </option>
+                <option value="ki"> ki </option>
+                <option value="rw"> rw </option>
+                <option value="rn"> rn </option>
+                <option value="ky"> ky </option>
+                <option value="kv"> kv </option>
+                <option value="kg"> kg </option>
+                <option value="ko"> ko </option>
+                <option value="ku"> ku </option>
+                <option value="kj"> kj </option>
+                <option value="lo"> lo </option>
+                <option value="la"> la </option>
+                <option value="lv"> lv </option>
+                <option value="li"> li </option>
+                <option value="ln"> ln </option>
+                <option value="lt"> lt </option>
+                <option value="lu"> lu </option>
+                <option value="lg"> lg </option>
+                <option value="lb"> lb </option>
+                <option value="gv"> gv </option>
+                <option value="mk"> mk </option>
+                <option value="mg"> mg </option>
+                <option value="ms"> ms </option>
+                <option value="ml"> ml </option>
+                <option value="mt"> mt </option>
+                <option value="mi"> mi </option>
+                <option value="mr"> mr </option>
+                <option value="mh"> mh </option>
+                <option value="mo"> mo </option>
+                <option value="mn"> mn </option>
+                <option value="na"> na </option>
+                <option value="nv"> nv </option>
+                <option value="ng"> ng </option>
+                <option value="nd"> nd </option>
+                <option value="ne"> ne </option>
+                <option value="nb"> nb </option>
+                <option value="nn"> nn </option>
+                <option value="ii"> ii </option>
+                <option value="oc"> oc </option>
+                <option value="oj"> oj </option>
+                <option value="cu"> cu </option>
+                <option value="or"> or </option>
+                <option value="om"> om </option>
+                <option value="os"> os </option>
+                <option value="pi"> pi </option>
+                <option value="ps"> ps </option>
+                <option value="fa"> fa </option>
+                <option value="pl"> pl </option>
+                <option value="pt"> pt </option>
+                <option value="pa"> pa </option>
+                <option value="qu"> qu </option>
+                <option value="rm"> rm </option>
+                <option value="ro"> ro </option>
+                <option value="ru"> ru </option>
+                <option value="se"> se </option>
+                <option value="sm"> sm </option>
+                <option value="sg"> sg </option>
+                <option value="sa"> sa </option>
+                <option value="sr"> sr </option>
+                <option value="sh"> sh </option>
+                <option value="st"> st </option>
+                <option value="tn"> tn </option>
+                <option value="sn"> sn </option>
+                <option value="ii"> ii </option>
+                <option value="sd"> sd </option>
+                <option value="si"> si </option>
+                <option value="ss"> ss </option>
+                <option value="sk"> sk </option>
+                <option value="sl"> sl </option>
+                <option value="so"> so </option>
+                <option value="nr"> nr </option>
+                <option value="es"> es </option>
+                <option value="su"> su </option>
+                <option value="sw"> sw </option>
+                <option value="ss"> ss </option>
+                <option value="sv"> sv </option>
+                <option value="tl"> tl </option>
+                <option value="ty"> ty </option>
+                <option value="tg"> tg </option>
+                <option value="ta"> ta </option>
+                <option value="tt"> tt </option>
+                <option value="te"> te </option>
+                <option value="th"> th </option>
+                <option value="bo"> bo </option>
+                <option value="ti"> ti </option>
+                <option value="to"> to </option>
+                <option value="ts"> ts </option>
+                <option value="tr"> tr </option>
+                <option value="tk"> tk </option>
+                <option value="tw"> tw </option>
+                <option value="ug"> ug </option>
+                <option value="uk"> uk </option>
+                <option value="ur"> ur </option>
+                <option value="uz"> uz </option>
+                <option value="ve"> ve </option>
+                <option value="vi"> vi </option>
+                <option value="vo"> vo </option>
+                <option value="wa"> wa </option>
+                <option value="cy"> cy </option>
+                <option value="wo"> wo </option>
+                <option value="fy"> fy </option>
+                <option value="xh"> xh </option>
+                <option value="ji"> ji </option>
+                <option value="yo"> yo </option>
+                <option value="za"> za </option>
+                <option value="zu"> zu </option>
+            </select>
+            <button class="btn" onclick="translatetext()">Translate</button>
+            <label for="result" id="result"></label>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>Made with ❤️ by a Traveller, for a Traveller</h3>
+    </div>
+</body>
+<script>
+    var a = localStorage.getItem("name");
+    document.getElementById("Auth_Name").innerHTML = ("Hi 🖐 , " + a);
+</script>
+<script src="language.js"></script>
+
+</html>
