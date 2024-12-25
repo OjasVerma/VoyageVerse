@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playwrite+GB+S+Guides:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.main{
+    background-image: url("../images/main_bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.main .heading{
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+}
+.input_text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input_text input{
+    width: 50vw;
+    height: 20vh;
+    text-align: left;
+    font-size: 25px;
+
+}
+.input_text select{
+    width: 20vw;
+    text-align: left;
+}
+.input_text select option{
+    background-color: rgba(215, 215, 215, 0.458);
+}
+.input_text .btn{
+    width: 30vw;
+}
+@media(max-width:500px){
+    .input_text input{
+        width: 80vw;
+    }
+    .input_text select{
+        width: 60vw;
+    }
+    .input_text .btn{
+        width: 55vw;
+    }
+}
+#result{
+    width: 50vw;
+    height: 20vh;
+    text-align: left;
+    border: 1px solid black;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.658);
+}

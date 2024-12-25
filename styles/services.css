@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playwrite+GB+S+Guides:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+a{
+    color: #0a1819;
+}
+.head {
+    padding: 30px;
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: sticky;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    /* background-color: crimson; */
+}
+
+nav {
+    /* background-color: cadetblue;  */
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    justify-content: space-evenly;
+    color: #0a1819;
+    text-decoration: none;
+}
+
+ul {
+    /* background-color: cornsilk; */
+    padding: 5px;
+    margin: 5px;
+}
+
+@media (max-width:730px) {
+    .head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+        text-align: center;
+        margin: 20px;
+    }
+
+    nav {
+        width: 80vw;
+        justify-content: center;
+    }
+}
+
+@media(max-width:350px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+.head .search{
+    /* background-color: crimson; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.head .search input{
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.head .search button{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(46, 46, 232);
+    border: 0px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#Auth_Name{
+    cursor: default;
+    color: black;
+}
+.main{
+    height: max-content;
+}
+.title{
+    padding-left: 35px;
+    margin-top: 30px;
+}
+.main .recommend{
+    height: max-content;
+    width: 100vw;
+    padding: 20px;
+}
+.main .recommend .window{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 250px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+}
+@media(max-width:445px){
+    .main .recommend .window{
+        width: 80vw;
+    }
+}
+.options{
+    height:max-content;
+    color: white;
+    text-decoration: none;
+}
+.options a{
+    color: white;
+}
+.options .Near{
+    width: 25vw;
+    height: 30vh;
+    background-image: url("../images/near.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.options .Near p, .options .fin p, .options .lang p{ 
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a18192f;
+    border-radius: 10px;
+}
+.options .fin{
+    width: 25vw;
+    height: 30vh;
+    background-image: url("../images/fin.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.options .lang{
+    width: 25vw;
+    height: 30vh;
+    background-image: url("../images/lang.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 20px;
+}
+@media(max-width:800px){
+    .options .Near{
+        display: block;
+        width: 80vw;
+        height: 40vh;
+        margin: 10px 0px;
+    }
+    .options .fin{
+        display: block;
+        width: 80vw;
+        height: 40vh;
+        margin: 10px 0px;
+    }
+    .options .lang{
+        display: block;
+        width: 80vw;
+        height: 40vh;
+        margin: 10px 0px;
+    }
+}
+.footer {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    background-color: rgba(9, 9, 9, 0.909);
+}
