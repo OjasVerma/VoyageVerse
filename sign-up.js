@@ -29,7 +29,6 @@
     const user = result.user;
     window.location.href = "./sign-in.html";
     // const user_name = user.name;
-    console.log(user.displayName);
     document.getElementById("Auth_Name").value = user.email;
     }).catch((error) => {
     const errorCode = error.code;
