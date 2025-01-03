@@ -53,7 +53,7 @@ submit.addEventListener("click", function(event){
     // Signed up 
     const user = userCredential.user;
     alert("Account is being made....")
-    window.location.href= "../sign-in.html";
+    window.location.href= "./sign-in.html";
 
   })
   .catch((error) => {
