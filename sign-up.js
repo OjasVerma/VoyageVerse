@@ -27,7 +27,7 @@
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     const user = result.user;
-    window.location.href = "../sign-in.html";
+    window.location.href = "./sign-in.html";
     // const user_name = user.name;
     console.log(user.displayName);
     document.getElementById("Auth_Name").value = user.email;
